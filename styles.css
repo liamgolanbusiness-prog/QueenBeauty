@@ -245,8 +245,11 @@ main > section { padding-block: clamp(4rem, 10vw, 8rem); position: relative; }
   border-bottom: 1px solid var(--line);
   display: flex; flex-direction: column; gap: 1.4rem;
   z-index: 80;
+  max-height: calc(100vh - var(--nav-h));
+  overflow-y: auto;
   animation: slideDown .35s var(--ease);
 }
+.mobile-menu[hidden] { display: none !important; }
 .mobile-menu nav { display: flex; flex-direction: column; gap: .8rem; }
 .mobile-menu nav a {
   font-family: var(--display);
